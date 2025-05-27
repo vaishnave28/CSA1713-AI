@@ -1,0 +1,21 @@
+from collections import deque
+
+def water_jug(capA, capB, target):
+    visited = set()
+    queue = deque()
+    queue.append((0, 0))
+    while queue:
+        a, b = queue.popleft()
+        if a == target or b == target:
+            print(f"Found solution: A={a}, B={b}")
+            return
+        if (a, b) in visited:
+            continue
+        visited.add((a, b))
+        queue.extend([
+            (capA, b), (a, capB), (0, b), (a, 0),
+            (min(capA, a + b), max(0, b - (capA - a))),
+            (max(0, a - (capB - b)), min(capB, a + b))
+        ])
+
+water_jug(4, 3, 2)
