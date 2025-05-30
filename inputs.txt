@@ -1,0 +1,44 @@
+sum(5, Total).
+
+person(Name, '15-03-1998').
+
+person(raj, DOB).
+
+teaches(Teacher, math, Room).
+
+teaches(dr_john, Subject, Room).
+
+studies(alice, Subject).
+
+planet(earth, Distance, Moons).
+
+move(3, left, middle, right).
+
+can_fly(Bird).
+
+sibling(alice, bob).
+
+suggest_diet(diabetes, Diet).
+
+can_get_banana(state(at_door, on_floor, at_window, has_not)).
+
+fruit_color(apple, Color).
+
+best_first_search(a, e, Path).
+
+assert(fever).
+?- assert(cough).
+?- assert(body_pain).                         diagnose(Disease).
+
+ reset_facts.
+init_facts.
+forward.
+print_facts.
+
+
+match([1, 2, 3], [1, 2, 3]).
+
+
+count_vowels([a, b, c, e, i, o, u, x], Count).
+
+
